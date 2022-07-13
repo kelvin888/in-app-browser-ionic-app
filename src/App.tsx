@@ -1,7 +1,10 @@
 import "./App.css";
 
 function App() {
-  const handleClick = () => {};
+  const handleClick = () => {
+    localStorage.setItem("name", "Kelvin");
+    window.close();
+  };
 
   return (
     <div className="App">
