@@ -3,7 +3,7 @@ import "./App.css";
 function App() {
   const handleClick = () => {
     localStorage.setItem("firstName", "Kelvin");
-    window.postMessage({ name: "Kelvin Orhungul", height: "5.11ft" });
+    window.postMessage("task completed successfully");
     window.close();
   };
 
