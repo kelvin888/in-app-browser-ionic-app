@@ -1,12 +1,15 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Aminat } from "./Aminat";
 import "./App.css";
 
 function App() {
   return (
-    <div className="App">
-      <div id="message">
-        welcome to react, a message has been posted using postmessage
-      </div>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Aminat />} />
+        <Route path="/kelv" element={<App />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
