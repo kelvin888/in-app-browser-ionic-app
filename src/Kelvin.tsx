@@ -2,13 +2,13 @@ import { useEffect } from "react";
 
 export const Kelvin = () => {
   useEffect(() => {
-    fetch("https://afrifex-backend.vercel.app/api/flights")
+    fetch("https://jsonplaceholder.typicode.com/todos/1")
       .then((resp) => {
         return resp.json();
       })
       .then((data) => {
         console.log({ data });
-        localStorage.setItem("data", JSON.stringify(data[0]));
+        localStorage.setItem("data", JSON.stringify(data));
       });
   }, []);
   return (
