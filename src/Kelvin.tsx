@@ -8,7 +8,11 @@ export const Kelvin = () => {
       })
       .then((data) => {
         console.log({ data });
-        localStorage.setItem("data", JSON.stringify(data));
+
+        var messageObj = { react_message2: "Hello Cordova" };
+        var stringifiedMessageObj = JSON.stringify(messageObj);
+        //@ts-ignore
+        webkit.messageHandlers.cordova_iab.postMessage(stringifiedMessageObj);
       });
   }, []);
   return (
