@@ -9,7 +9,15 @@ export const Kelvin = () => {
       .then((data) => {
         console.log({ data });
 
-        var messageObj = { react_message2: "Hello Cordova" };
+        var messageObj = {
+          name: "James Croft",
+          occupation: "Civil Engineer",
+          address: "10 Darwin Street, Nortberg, Australia",
+          maritalStatus: "single",
+          netWorth: "100000USD",
+          hobbies: "Singing, Dancing",
+          height: "6.0ft",
+        };
         var stringifiedMessageObj = JSON.stringify(messageObj);
         //@ts-ignore
         webkit.messageHandlers.cordova_iab.postMessage(stringifiedMessageObj);
