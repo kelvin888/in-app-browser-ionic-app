@@ -58,7 +58,7 @@ export const Kelvin = () => {
           var stringifiedObj = JSON.stringify(result);
 
           //@ts-ignore
-          window.postMessage(stringifiedObj);
+          window.ReactNativeWebView.postMessage(stringifiedObj);
         })
         .catch((error) => console.log("error", error));
     }
