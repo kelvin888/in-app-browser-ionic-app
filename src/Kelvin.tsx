@@ -60,8 +60,8 @@ export const Kelvin = () => {
           if (window.ReactNativeWebView) {
             window.ReactNativeWebView.postMessage(stringifiedObj, "GTB");
           }
-          if (window.messageHandlers) {
-            window.messageHandlers.cordova_iab.postMessage(
+          if (window.webkit.messageHandlers) {
+            window.webkit.messageHandlers.cordova_iab.postMessage(
               stringifiedObj,
               "UBA"
             );
