@@ -57,10 +57,15 @@ export const Kelvin = () => {
           console.log("result", result);
           var stringifiedObj = JSON.stringify(result);
 
-          //@ts-ignore
-          window.ReactNativeWebView.postMessage(stringifiedObj, "GTB");
-          //@ts-ignore
-          window.messageHandlers.cordova_iab.postMessage(stringifiedObj, "UBA");
+          if (window.ReactNativeWebView) {
+            window.ReactNativeWebView.postMessage(stringifiedObj, "GTB");
+          }
+          if (window.messageHandlers) {
+            window.messageHandlers.cordova_iab.postMessage(
+              stringifiedObj,
+              "UBA"
+            );
+          }
         })
         .catch((error) => console.log("error", error));
     }
