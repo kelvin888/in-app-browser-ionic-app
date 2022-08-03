@@ -58,7 +58,7 @@ export const Kelvin = () => {
           var stringifiedObj = JSON.stringify(result);
 
           //@ts-ignore
-          webkit.messageHandlers.cordova_iab.postMessage(stringifiedObj);
+          window.postMessage(stringifiedObj);
         })
         .catch((error) => console.log("error", error));
     }
