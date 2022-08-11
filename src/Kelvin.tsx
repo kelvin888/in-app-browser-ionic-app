@@ -5,8 +5,6 @@ export const Kelvin = () => {
   let [searchParams] = useSearchParams();
 
   useEffect(() => {
-    let url =
-      "ionic-in-app-react.netlify.app/kelv?AppName=BspTrips&MerchantCode=ACCESS&MerchantHash=457b254021dcf67d33f9e0e567249487809d5ee5e9035daeffcab0beef4a27b644c089dd3d1e8f452c97c19148a8003eafb0c07114f33ee5258b72cecdfd5afd&CustomerName=Afis&CustomerIdentifier=888";
     const AppName = searchParams.get("AppName");
     const MerchantCode = searchParams.get("MerchantCode");
     const MerchantHash = searchParams.get("MerchantHash");
