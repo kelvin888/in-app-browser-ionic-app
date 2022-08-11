@@ -2,4 +2,5 @@
 interface Window {
   ReactNativeWebView: any;
   webkit: any;
+  flutter_inappwebview: any;
 }
