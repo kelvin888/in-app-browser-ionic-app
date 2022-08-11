@@ -57,22 +57,22 @@ export const Kelvin = () => {
           console.log("result", result);
           var stringifiedObj = JSON.stringify(result);
 
-          //post message to react native
-          if (window.ReactNativeWebView) {
-            window.ReactNativeWebView.postMessage(stringifiedObj);
-          }
+          // //post message to react native
+          // if (window.ReactNativeWebView) {
+          //   window.ReactNativeWebView.postMessage(stringifiedObj);
+          // }
           //post message to Ionic
           if (window.webkit.messageHandlers) {
             window.webkit.messageHandlers.cordova_iab.postMessage(
               stringifiedObj
             );
           }
-          if (window.flutter_inappwebview) {
-            window.flutter_inappwebview.callHandler(
-              "myHandlerName",
-              stringifiedObj
-            );
-          }
+          // if (window.flutter_inappwebview) {
+          //   window.flutter_inappwebview.callHandler(
+          //     "myHandlerName",
+          //     stringifiedObj
+          //   );
+          // }
         })
         .catch((error) => console.log("error", error));
     }
