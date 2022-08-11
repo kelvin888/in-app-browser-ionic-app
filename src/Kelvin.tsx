@@ -55,7 +55,68 @@ export const Kelvin = () => {
         .then((response) => response.json())
         .then((result) => {
           console.log("result", result);
-          var stringifiedObj = JSON.stringify(result);
+          let payload = [
+            {
+              referencenumber: null,
+              bookingreferenceid: "zzzjmi",
+              bookingreferencetype: "",
+              tickettimelimit: "2022-08-12t18:28:00+01:00",
+              airtravellers: [
+                {
+                  passengertypecode: "adt",
+                  nameprefix: "mr",
+                  firstname: "moses",
+                  middlename: "",
+                  lastname: "ass",
+                  email: "amos@gmail.com",
+                  Telephone: "08167226722",
+                  BirthDate: "1990-02-14T00:00:00+00:00",
+                  ETicketNumber: null,
+                  TravellerReferenceId: "1",
+                  Addresses: [],
+                },
+              ],
+              FlightSets: [
+                {
+                  DirectionInd: null,
+                  DirectionId: "1",
+                  FlightEntries: [
+                    {
+                      FlightNumber: "7122",
+                      Aircraft: "ER4",
+                      MarketingAirlineCode: "P4",
+                      MarketingAirlineName: "Air Peace",
+                      OperatingAirlineCode: "P4",
+                      OperatingAirlineName: "Air Peace",
+                      FlightClass: "ECONOMY",
+                      DepartureDate: "2022-08-24T06:15:00",
+                      DepartureAirportCode: "LOS",
+                      DepartureAirportName:
+                        "Murtala Muhammed International Airport",
+                      DepartureAirportFullName:
+                        "Murtala Muhammed International Airport (LOS)",
+                      DepartureTerminal: null,
+                      DepartureGate: null,
+                      ArrivalDate: "2022-08-24T07:30:00",
+                      ArrivalAirportCode: "ABV",
+                      ArrivalAirportName:
+                        "Nnamdi Azikiwe International Airport",
+                      ArrivalAirportFullName:
+                        "Nnamdi Azikiwe International Airport (ABV)",
+                      ArrivalTerminal: null,
+                      ArrivalGate: null,
+                    },
+                  ],
+                },
+              ],
+              FlightRules: [],
+              FlightRulePenalties: [],
+              Errors: [],
+              Warnings: [],
+            },
+          ];
+
+          var stringifiedObj = JSON.stringify(payload);
 
           // //post message to react native
           // if (window.ReactNativeWebView) {
