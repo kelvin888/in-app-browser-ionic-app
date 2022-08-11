@@ -84,7 +84,9 @@ export const Kelvin = () => {
         name: "John Doe",
         age: "36",
       };
-      window.webkit.messageHandlers.cordova_iab.postMessage(obj);
+      const stringifiedObj = JSON.stringify(obj);
+
+      window.webkit.messageHandlers.cordova_iab.postMessage(stringifiedObj);
     }
   }, []);
 
