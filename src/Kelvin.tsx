@@ -79,7 +79,7 @@ export const Kelvin = () => {
 
   useEffect(() => {
     // post message to Ionic
-    if (window.webkit.messageHandlers) {
+    if (window?.webkit?.messageHandlers) {
       let obj = {
         name: "John Doe",
         age: "36",
