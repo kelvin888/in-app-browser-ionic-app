@@ -1,8 +1,7 @@
 import { useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
 
 export const Kelvin = () => {
-  let [searchParams] = useSearchParams();
+  // let [searchParams] = useSearchParams();
 
   // useEffect(() => {
   //   const AppName = searchParams.get("AppName");
